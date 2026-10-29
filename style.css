@@ -1,9 +1,8 @@
   /*Body styling*/
  body {
-    height: 100vh;
+    min-height: 100vh;
     cursor: url("images/cursor.png"), auto;
-    background-size: contain;
-    background: linear-gradient(180deg,rgba(252, 225, 234, 1) 0%, rgba(251, 244, 228, 1) 100%);
+    background: linear-gradient(180deg,rgba(252, 225, 234, 1) 0%, rgba(251, 244, 228, 1) 100%) no-repeat;
     font-family: Verdana, Paprika, Parkinsans, 'Comic Sans', sans-serif;
 }
  
@@ -46,20 +45,30 @@
     text-shadow: -2px 2px 2px #FD6D86;
 }
 
+/*custom cursor on hover over links and buttons*/
 a:hover{
     cursor: url("images/pointer.png"), pointer;
 }
 
-/* Index Styling */
+button:hover{
+    cursor: url("images/pointer.png"), pointer;
+}
+
+
+/* Index page Styling */
 
 #work_and_about {
     display: flex;
-    margin: 0 auto;
-    width: 60%;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .waa_item {
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .waa_item_bubble {
@@ -74,5 +83,129 @@ margin-bottom: 1rem;
 }
 
 .waa_item_image:hover{
+    border-width: 12px 12px 4px 4px;
+}
+
+
+/* Works page Styling */
+
+.work_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.work_item_image{
+    margin: 1rem;
+    border-style: solid;
+    border-color: #5475DC ;
+    border-width: 4px 4px 12px 12px;
+}
+
+.work_item_desc {
+    width: 50%;
+    margin: 1rem;
+}
+
+.work_item_desc_content {
+    border-style: solid;
+    border-color: #3A3A44 ;
+    background-color: #FEF3F9;
+    border-radius: 36px;
+    border-width: 2px;
+    padding:1rem 2rem;
+}
+
+.work_item_desc_title {
+    font: bold 36px Parkinsans, sans-serif;
+    color: #5475DC;
+    margin: 0;  
+    padding: 0.5rem 0rem;
+
+}
+
+.work_item_desc_text {  
+    margin: 0;  
+    padding: 1rem 0rem;
+    font: 16px Parkinsans, sans-serif;
+}
+
+.work_item_btn {
+    float: right;
+    margin:0.5rem;
+    background: url("images/exclaim.png") no-repeat;
+    background-size:contain;
+    background-position: center;
+    border:none;
+    color:#FD6D86;
+    padding: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  
+}
+
+.work_item_btn:hover{
+    background: url("images/exclaimhov.png") no-repeat;
+    background-size:contain;
+    background-position: center;
+    border:none;
+    color:#FFB348;
+}
+
+/* About page styuling */
+
+#about_me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+#about_me_text {
+    font: 16px Parkinsans, sans-serif;
+    color: #3A3A44;
+    background-color: #FEF3F9;
+    border: solid 2px #3A3A44;
+    border-radius: 24px;
+    margin-right:2rem;
+    padding: 0.5rem 2rem;
+    width: 50%;
+}
+
+#about_me_image {
+    border-style: solid;
+    border-color: #FFB348 ;
+    border-width: 4px 4px 12px 12px;
+}
+
+#about_me_title {
+    font: 36px Paprika, sans-serif;
+}
+
+#about_me_image:hover{
+    border-width: 12px 12px 4px 4px;
+}
+
+
+/* Contact page styling */
+
+#contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    height: 50vh;
+}
+
+.contacts_image {
+     border-style: solid;
+    border-color: #FD6D86;
+    border-width: 4px 4px 12px 12px;
+}
+
+.contacts_image:hover{
     border-width: 12px 12px 4px 4px;
 }
